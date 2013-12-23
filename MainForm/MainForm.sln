@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainForm", "MainForm\MainForm.csproj", "{9566E9D0-5360-49FC-BADC-9E71DD4DC190}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "ClassLibrary1\Library.csproj", "{4B59AEB2-5A63-4E55-B740-7CFABEF05F9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryLibrary", "ClassLibrary1\GeometryLibrary.csproj", "{4B59AEB2-5A63-4E55-B740-7CFABEF05F9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

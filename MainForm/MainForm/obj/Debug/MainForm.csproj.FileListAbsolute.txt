@@ -9,3 +9,7 @@ c:\users\евгений\documents\visual studio 2012\Projects\MainForm\MainForm\
 c:\users\евгений\documents\visual studio 2012\Projects\MainForm\MainForm\obj\Debug\MainForm.exe
 c:\users\евгений\documents\visual studio 2012\Projects\MainForm\MainForm\obj\Debug\MainForm.pdb
 C:\Users\Евгений\Documents\Visual Studio 2012\Projects\MainForm\MainForm\obj\Debug\MainForm.MyForm.resources
+C:\Users\Евгений\Documents\Visual Studio 2012\Projects\MainForm\MainForm\bin\Debug\ClassLibrary1.xml
+C:\Users\Евгений\Documents\GitHub\CsharpHomework\MainForm\MainForm\bin\Debug\MainForm.exe.config
+C:\Users\Евгений\Documents\GitHub\CsharpHomework\MainForm\MainForm\obj\Debug\MainForm.exe
+C:\Users\Евгений\Documents\GitHub\CsharpHomework\MainForm\MainForm\obj\Debug\MainForm.pdb

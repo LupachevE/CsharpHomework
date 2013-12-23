@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Controls;
 
 namespace MainForm
 {
@@ -17,16 +18,25 @@ namespace MainForm
 
         public MyForm()
         {
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             InitializeComponent();
             quadrangle = new ImageQuadrangle();
+
+            ToolTip toolTip1 = new ToolTip();
+            
             textBox1.Text = "Let's start";
             textBox2.Text = "First point";
+            toolTip1.SetToolTip(textBox2, "Input X and Y of first point seperated with ',' and '.'");
             textBox3.Text = "Second point";
+            toolTip1.SetToolTip(textBox3, "Input X and Y of second point seperated with ',' and '.'");            
             textBox4.Text = "Third point";
+            toolTip1.SetToolTip(textBox4, "Input X and Y of third point seperated with ',' and '.'");
             textBox5.Text = "Fourth point";
+            toolTip1.SetToolTip(textBox5, "Input X and Y of fourth point seperated with ',' and '.'");
+            
         }
-
         private void button_click(object sender, EventArgs e)
         {
             quadrangle.checkQuadrangle(textBox2, textBox3, textBox4, textBox5);
@@ -46,6 +56,11 @@ namespace MainForm
 
             quadrangle.drawQuadrangle(e.Graphics);
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
     class ImageQuadrangle
@@ -58,35 +73,12 @@ namespace MainForm
 
         public int toIntFirst(string somestring)
         {
-            int i = 0;
-            int acc = 0;
-
-            while (!somestring[i].Equals(','))
-            {
-                acc = acc * 10 + (somestring[i] - '0');
-                i++;
-            }
-
-            return acc;
+            return int.Parse(somestring.Split(',', '.')[0].Trim());
         }
 
         public int toIntSecond(string somestring)
         {
-            int i = 0;
-            int acc = 0;
-
-            while (!somestring[i].Equals(','))
-            {
-                i++;
-            }
-            i++;
-            while (!somestring[i].Equals('.'))
-            {
-                acc = acc * 10 + (somestring[i] - '0');
-                i++;       
-            }
-
-            return acc;
+            return int.Parse(somestring.Split(',', '.')[1].Trim());
         }
 
         public void checkQuadrangle(TextBox textBox2, TextBox textBox3, TextBox textBox4, TextBox textBox5)
@@ -101,16 +93,16 @@ namespace MainForm
             point2 = new Point(50, 10);
             point3 = new Point(40, 40);
             point4 = new Point(0, 40);*/
-            controlMessage = Library.Geometry.IsParallelogramm(point1, point2, point3, point4) ? "It is parallelogramm" : "It is not parallelogramm";
+            controlMessage = GeomLibrary.Geometry.IsParallelogramm(point1, point2, point3, point4) ? "It is parallelogramm" : "It is not parallelogramm";
         }
 
         public void drawQuadrangle(System.Drawing.Graphics gr)
         {
             Pen p = new Pen(Color.Black, 5);
             gr.DrawLine(p, point1, point2);
-            gr.DrawLine(p, point2, point3);
-            gr.DrawLine(p, point3, point4);
-            gr.DrawLine(p, point4, point1);
+            gr.DrawLine(p, point2, point4);
+            gr.DrawLine(p, point4, point3);
+            gr.DrawLine(p, point3, point1);
             //gr.Dispose();
         }
     }

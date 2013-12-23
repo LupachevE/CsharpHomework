@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLibrary1</name>
+    </assembly>
+    <members>
+        <member name="M:GeomLibrary.Geometry.IsParallelogramm(System.Drawing.Point,System.Drawing.Point,System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            XML-комментарии позволяют создавать программисту документацию прямо из исходных файлов Visual Studio
+            </summary>
+            <param name="firstPoint">Задана 1-ая точка четырёхугольника</param>
+            <param name="secondPoint">Задана 2-ая точка четырёхугольника</param>
+            <param name="thirdPoint">Задана 3-я точка четырёхугольника</param>
+            <param name="fourthPoint">Задана 4-ая точка четырёхугольника</param>
+            <returns>Возвращается true/false в зависимости от того, является ли получившийся четырёхугольник параллелограммом</returns>
+        </member>
+    </members>
+</doc>
